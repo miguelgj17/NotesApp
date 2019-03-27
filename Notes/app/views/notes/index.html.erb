@@ -18,7 +18,7 @@
       <tr>
         <td><%= note.text %></td>
         <td><%= note.user %></td>
-        <td><%= note.image %></td>
+        <td><%= image_tag note.image.thumb.url %></td>
         <td><%= note.title %></td>
         <td><%= link_to 'Show', note %></td>
         <td><%= link_to 'Edit', edit_note_path(note) %></td>
