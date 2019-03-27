@@ -17,7 +17,7 @@
     <% @notes.each do |note| %>
       <tr>
         <td><%= note.text %></td>
-        <td><%= note.user %></td>
+        <td><%= note.user_id %></td>
         <td><%= image_tag note.image.thumb.url %></td>
         <td><%= note.title %></td>
         <td><%= link_to 'Show', note %></td>

@@ -8,7 +8,7 @@ class SessionController < ApplicationController
   		flash.now.alert = "username #{params[:username]} was invalid"
   		render :new
   	elsif @user.password == params[:password]
-  		session[:user] = @user.name
+  		session[:user] = @user.id
   		redirect_to root_url, :notice => "Logged in!"
   	else
   		flash.now.alert = "Password was invalid"
