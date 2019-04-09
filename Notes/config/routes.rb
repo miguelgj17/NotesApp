@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :session
   resources :notes
-  root :to => "notes#index"
+  root :to => "session#new"
 
   #get 'session/new'
 
