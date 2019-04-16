@@ -1,6 +1,8 @@
 class SessionController < ApplicationController
+  before_filter :authenticate_user!, only: [:notes]
   def new
   end
+
 
   def create
   	@user = User.find_by name: params[:username]
@@ -16,6 +18,7 @@ class SessionController < ApplicationController
   		render :new
   	end
   end
+
 
   def destroy
   	session[:user] = nil

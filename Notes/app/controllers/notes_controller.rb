@@ -25,6 +25,8 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = Note.new(note_params)
+    @user = User.find_by name: params[:username]
+    note[:usuario] = @user.id
 
     respond_to do |format|
       if @note.save

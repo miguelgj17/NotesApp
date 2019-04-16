@@ -14,6 +14,7 @@
 <div class="row">
 
   <% @notes.each do |note| %>
+  <% if note.user_id == session[:user] %>
     <div class="col-md-3 ">
       <table style="background-image: url('../../postit2.png'); background-repeat: no-repeat;">
           <tr><td colspan="3" align="center"><br><br>
@@ -34,6 +35,7 @@
           </tr>
       </table>
     </div>
+  <% end %>
   <% end %>
 </div>
 
